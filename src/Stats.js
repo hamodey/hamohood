@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./Stats.css";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import StatsRow from "./StatsRow";
@@ -67,7 +67,7 @@ function Stats() {
     Promise.all(promises).then(()=>{
       setStocksData(testData);
     })
-  }, []);
+  }, [testData, getMyStocks]);
 
   return (
     <div className="stats">
